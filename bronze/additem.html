@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- 
+Robert Warren
+Term 1304
+Mobile Interface and Usability (MIU)
+I Owe, I Owe * Bill List
+
+Dropbox: https://www.dropbox.com/sh/03yhmwxv5pmms41/4XEl9oEfZ8
+Github: https://github.com/grindnmosh/Warren_Robert_1304_MIU.git
+URL: http://grind-design.com
+-->
+<html>
+	<head>
+		<title>I Owe, I Owe * Bill List</title>
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="target-densitydpi=device-dpi" />
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+	</head>
+	<body>
+		<article id="Main">
+			<hgroup>
+  				<h1><img src="img/brand.jpg" border=3 /></h1>
+				<h2 class="pageMatch">Add Bill</h2>
+			</hgroup>
+			<form action="#" method="post" id="addBill">
+				<fieldset id="top">
+					<legend> Bill Information </legend>
+					<span>Fields marked with <p class="star">*</p> are required fields.</span>
+					<ul id="errors"></ul>
+					<ul id="newBill">
+						<li><p class="star">*</p><label for="btype">Bill Type: </label>
+							<select id="btype">
+								<option value="--Choose Bill Type--">--Choose Bill Type--</option>
+								<option value="Housing">Housing</option>								
+								<option value="Vehicle">Vehicle</option>
+								<option value="Utilities">Utilities</option>
+								<option value="Personal">Personal</option>
+								<option value="Education">Education</option>
+								<option value="Business">Business</option>
+								<option value="Other">Other</option>
+							</select>	
+						</li>
+						<li><p class="star">*</p><label for="bname">Bill Name: </label><input type="text" id="bname" placeholder="Elec, Car, Netflix, etc" /></li>
+						<li><label for="prio">Priority: </label> Low <input type="range" id="prio" min="1" max="5" value="1" /> High </li>
+						<li><p class="star">*</p><label for="amt">Amount: $</label><input type="text" id="amt" placeholder="150.00" /></li>
+						<li><p class="star">*</p><label for="due">Due Date: </label><input type="date" id="due"  /></li>
+						<li><p class="star">*</p><label for="due" id="freq" class="insert">frequency: </label>
+						<input type="hidden" name="billNumber" id="billNumber" value="00001" />
+						<input type="hidden" name="timeSaved" id="timeSaved" value="currentTime" />
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend> Update Bills </legend>
+					<ul>			
+						<li><input type="radio"  checked value="UnPaid" id="unpd" name="status"/><label for="pd">Unpaid </label></li>
+						<li><input type="radio" value="Paid" id="pd" name="status"/><label for="pd">Paid With: </label>
+							<select id="pdwith">
+								<optgroup label="Cash Payment Types">		
+									<option value="--Choose Payment Type--">--Choose Payment Type--</option>
+									<option value="Debit Card">Debit Card</option>
+									<option value="Cash">Cash</option>
+									<option value="Check">Check</option>
+								</optgroup>
+								<optgroup label="Credit Cards">
+									<option value="MasterCard">MasterCard</option>
+									<option value="Visa">Visa</option>
+									<option value="Discover">Discover</option>
+									<option value="American Express">American Express</option>
+									<option value="Other Card">Other Card</option>
+								</optgroup>									
+							</select>									
+						</li>
+						<li><input type="checkbox" value="On Time" id="ontime" name="paymentTime" /><label for="ontime">On Time</label></li>
+						<li><input type="checkbox" value="Late" id="late" name="paymentTime" /><label for="late">Late</label></li>
+						<li><input type="checkbox" value="Late Fee" id="lfee" name="paymentTime" /><label for="lfee">Late Fee Imposed</label></li>
+						<li><label for="comments" >Comments:</label><textarea id="textArea" name="textArea" placeholder="Leave comments or notes here...."></textarea></li>	
+					</ul>	
+				</fieldset>
+				<input type="button" value="Save Me" id="saveMe"/>
+				<input type="button" value="Reset Me" id="resetMe"/>	<br> <br>
+				<a href = "index.html"><input type="button" value="Back" id="back"/></a><br><br>
+			</form>	
+			<input type="button" value="Clear Storage" id="clearAllData"/>
+			<a href = "#" id="displayLink"><input type="button" value="Display Bills" /></a>
+			<a href = "additem.html" id="addNewBill"><input type="button" value="Add Another Bill" /></a>
+			<script type="text/javascript" src="js/main.js"></script>
+			<script type="text/javascript" src="js/json.js"></script>
+		</article>
+		<footer id="footer">
+			<br>
+			<p> Follow my <a href = "https://github.com/grindnmosh">github</a> for updates </p>
+			<p> Like my work? Follow me on <a href = "https://twitter.com/grindnmosh">Twitter</a> </p>
+    		<p> Designer:  Robert Warren </p>
+		</footer>
+	</body>
+</html>
