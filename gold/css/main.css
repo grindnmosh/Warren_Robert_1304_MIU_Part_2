@@ -12,7 +12,7 @@ URL: http://grind-design.com
 */
 
 html {
-    background-color: #B7B7B6;
+    background-color: #B7B7B6; 
 }
 body {
 	font-family: Arial, Helvetica, san-seriff;width: 545px;margin: auto;padding: 10px; color: black;
@@ -113,9 +113,7 @@ h2 {
 	align: center;
 }
 #saveMe {
-	margin-left: 100px;
-	display: inline;
-	background: green;
+	background: darkgreen;
 }
 #bill {
 	list-style: none;
@@ -124,8 +122,7 @@ h2 {
 	padding: 10px 10px 10px 10px;	
 }
 #resetMe {
-	margin-left: 150px;
-	background: red;
+	background: darkred;
 }
 #back {
 	background: grey;
