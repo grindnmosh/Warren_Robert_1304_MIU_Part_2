@@ -53,22 +53,16 @@ li {
 	line-height: 2em;
 }
 .billImg {
-  align: left;
-  width: 100px;
-  margin: 40px 0px 40px 0px;
-  border: 2px solid blue;
+	align: left;
+	width: 100px;
+	margin: 40px 0px 40px 0px;
+	border: 2px solid blue;
 }
 body ul li {
 	list-style: none;
 }
-#searchField {
-	width: 300px;
-	margin: 0px 20px 0px 0px
-}
-#searchButton {
-	width: 100px;
-	
-}
+
+
 form fieldset ul li {
 	list-style: none;
 }
