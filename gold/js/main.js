@@ -19,8 +19,8 @@ window.addEventListener("DOMContentLoaded", function() {
 	var time = document.getElementById("ontime");
 	var late = document.getElementById("late");
 	var fee = document.getElementById("lfee");
-	var checkBox = document.forms[0].paymentTime;
-	var payer = document.forms[0].status;
+	//var checkBox = document.forms[1].paymentTime;
+	//var payer = document.forms[1].status;
 	var cardCash = document.getElementById("pdwith");
 	var saveSuccess = "Your Bill Is Saved!"
 	var saveBill = document.getElementById("saveMe");
