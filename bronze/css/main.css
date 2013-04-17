@@ -15,7 +15,11 @@ html {
     background-color: #B7B7B6; 
 }
 body {
-	font-family: Arial, Helvetica, san-seriff;width: 545px;margin: auto;padding: 10px; color: black;
+	font-family: Arial, Helvetica, san-seriff;
+	width: 545px;
+	margin: 20 40 20 40;
+	padding: 10px; 
+	color: black;
 }
 h1 { 
 	text-align: center;
