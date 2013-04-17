@@ -41,7 +41,6 @@ form {
 	color: blue
 }
 ul {
-	text-align: center;
 	margin-right: 40px;
 }
 legend {
@@ -95,6 +94,7 @@ form fieldset ul select {
 #browseSz {
 	width: 450px;
 }
+
 #freq {
 	display: inline;
 } 

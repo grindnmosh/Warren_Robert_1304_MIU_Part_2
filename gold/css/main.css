@@ -56,7 +56,6 @@ p {
 	text-align: center; 
 }
 ul {
-	text-align: center;
 	margin-right: 40px;
 }
 
@@ -118,7 +117,19 @@ form fieldset ul select {
 #paymentTypeImg {
 	Height: 90px;
 }
-#imgSize {
+#imgSize1 {
+	Height: 150px;
+}
+#imgSize2 {
+	Height: 150px;
+}
+#imgSize3 {
+	Height: 150px;
+}
+#imgSize4 {
+	Height: 150px;
+}
+#imgSize5 {
 	Height: 150px;
 }
 #freq {
