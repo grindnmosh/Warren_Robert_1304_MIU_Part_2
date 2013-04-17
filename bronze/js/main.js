@@ -1,12 +1,11 @@
 /*
 Robert Warren
-Term 1304
-Mobile Interface and Usability (MIU)
+Term 1303
+Visual Frameworks
 I Owe, I Owe * Bill List
-
-Dropbox: https://www.dropbox.com/sh/03yhmwxv5pmms41/4XEl9oEfZ8
-Github: https://github.com/grindnmosh/Warren_Robert_1304_MIU.git
-URL: http://grind-design.com
+http://grind-design.com
+https://www.dropbox.com/sh/8bkisi092jahhs9/0IygmesVE8
+https://github.com/grindnmosh/Warren_Robert_1303_VFW
 */
 
 window.addEventListener("DOMContentLoaded", function() {

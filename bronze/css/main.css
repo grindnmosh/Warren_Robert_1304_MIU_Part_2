@@ -28,6 +28,9 @@ h2 {
 h3 { 
 	text-align: center; 
 }
+h4 {
+	text-align: center;
+}
 form {
 	color: blue;
 	margin: 20px;
@@ -36,6 +39,10 @@ form {
 }
 .pageMatch{
 	color: blue
+}
+ul {
+	text-align: center;
+	margin-right: 40px;
 }
 legend {
 	margin: 20px;
@@ -53,21 +60,16 @@ li {
 	line-height: 2em;
 }
 .billImg {
-  align: left;
-  width: 100px;
-  margin: 40px 0px 40px 0px;
-  border: 2px solid blue;
+	align: left;
+	width: 100px;
+	margin: 40px 0px 40px 0px;
+	border: 2px solid blue;
+}
+form fieldset ul li {
+	list-style: none;
 }
 body ul li {
 	list-style: none;
-}
-#searchField {
-	width: 300px;
-	margin: 0px 20px 0px 0px
-}
-#searchButton {
-	width: 100px;
-	
 }
 form fieldset ul li {
 	list-style: none;
@@ -87,12 +89,25 @@ form fieldset ul select {
 	border: 1px solid black;
 	background: lightgrey;
 }
+#gridImg .ui-block {
+	height: 100px;
+}
+#browseSz {
+	width: 450px;
+}
 #freq {
 	display: inline;
 } 
-#freqs {
+#freqs 
 	display: inline;
 } 
+div {
+	list-style: none;
+	border: 1px solid black;	
+	background: white;
+	padding: 10px 10px 10px 10px;
+	list-style: none;	
+}
 #addNewBill {
 	display: none
 }
@@ -113,9 +128,7 @@ h2 {
 	align: center;
 }
 #saveMe {
-	margin-left: 100px;
-	display: inline;
-	background: green;
+	background: darkgreen;
 }
 #bill {
 	list-style: none;
@@ -124,8 +137,7 @@ h2 {
 	padding: 10px 10px 10px 10px;	
 }
 #resetMe {
-	margin-left: 150px;
-	background: red;
+	background: darkred;
 }
 #back {
 	background: grey;
