@@ -15,7 +15,11 @@ html {
     background-color: #B7B7B6; 
 }
 body {
-	font-family: Arial, Helvetica, san-seriff;width: 545px;margin: auto;padding: 10px; color: black;
+	font-family: Arial, Helvetica, san-seriff;
+	width: 545px;
+	margin: auto;
+	padding: 10px; 
+	color: black;
 }
 h1 { 
 	text-align: center;
@@ -27,6 +31,9 @@ h2 {
 }
 h3 { 
 	text-align: center; 
+}
+h4 {
+	text-align: center;
 }
 form {
 	color: blue;
@@ -48,6 +55,11 @@ fieldset {
 p { 
 	text-align: center; 
 }
+ul {
+	text-align: center;
+	margin-right: 40px;
+}
+
 li { 
 	font-family: times;
 	line-height: 2em;
@@ -58,11 +70,12 @@ li {
 	margin: 40px 0px 40px 0px;
 	border: 2px solid blue;
 }
+form fieldset ul li {
+	list-style: none;
+}
 body ul li {
 	list-style: none;
 }
-
-
 form fieldset ul li {
 	list-style: none;
 }
@@ -81,12 +94,46 @@ form fieldset ul select {
 	border: 1px solid black;
 	background: lightgrey;
 }
+#gridImg .ui-block {
+	height: 100px;
+}
+#browseSz {
+	width: 550px;
+}
+#billTypeImg {
+	Height: 90px;
+}
+#dueDateImg {
+	Height: 90px;
+}
+#paymentStatusImg {
+	width: 90px;
+}
+#priorityImg {
+	Height: 90px;
+}
+#frequencyImg {
+	Height: 90px;
+}
+#paymentTypeImg {
+	Height: 90px;
+}
+#imgSize {
+	Height: 150px;
+}
 #freq {
 	display: inline;
 } 
-#freqs {
+#freqs 
 	display: inline;
 } 
+div {
+	list-style: none;
+	border: 1px solid black;	
+	background: white;
+	padding: 10px 10px 10px 10px;
+	list-style: none;	
+}
 #addNewBill {
 	display: none
 }

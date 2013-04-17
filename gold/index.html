@@ -30,7 +30,7 @@ URL: http://grind-design.com
 			
 			<div data-role="header" data-position="fixed">
 				<hgroup>
-					<h1><img src="img/brand.jpg" border=3 /></h1>
+					<h1><img id="brandImg" src="img/brand.jpg" border=3 /></h1>
 					<div data-role="navbar">
 						<ul>
 							<li><a href="#home" data-icon="home">Home</a></li>
@@ -41,25 +41,60 @@ URL: http://grind-design.com
 				</hgroup>
 			</div>
 			<div  data-role="content">
-					<!--<form>
-					     <input type="search" name="search-1" id="search-1" value="">
-					</form>-->
-		    	
 					<h3><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" class="browse" id="cta"><img id="ctaimg" src="img/ctabg.png"></a></h3>
 				<ul>
+					<input type="search" name="search" id="search-basic" value="" />
 		        	<p><img src="img/Browsemain.png" id="browseSz" /></p>
-		        		<form>
-					     	<input type="search" name="search-1" id="search-1" value="">
-		        		</form>
-	        		<div class="ui-grid-b">
-					    <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:60px"><a href="error404.html" class="browse" id="billType"><img id="billTypeImg" src="img/btypeimg.png">Test 1</a></div></div>
+		        		<div class="ui-grid-a">
+		        			<div class="ui-block-a">
+		        				<ul class="ui-bar ui-bar-d" data-role="listview" data-inset="true">
+									<li>
+										<img id="billTypeImg" src="img/btypeimg.png" value="imgSize" />	
+										<h3>Bill Type</h3>
+										<p>What kind of bill is it?</p>
+									</li>
+									<li>
+										<img id="dueDateImg" src="img/dueimg.png" value="imgSize" />	
+										<h3>Due Date</h3>
+										<p>When is it due?</p>
+									</li>
+									<li>
+										<img id="paymentStatusImg" src="img/paystatimg.png" value="imgSize" />	
+										<h3>Payment Status</h3>
+										<p>Is it paid?</p>
+									</li>
+		        				</ul>
+		        			</div>
+							<div class="ui-block-b">
+		        				<ul class="ui-bar ui-bar-d" data-role="listview" data-inset="true">
+									<li>
+										<img id="priorityImg" src="img/prioimg.png" value="imgSize" />	
+										<h3>Priority</h3>
+										<p>How Important is it?</p>
+									</li>
+									<li>
+										<img id="frequencyImg" src="img/freqimg.png" value="imgSize" />	
+										<h3>Frequency</h3>
+										<p>How often is it due?</p>
+									</li>
+									<li>
+										<img id="paymentTypeImg" src="img/payimg.png" value="imgSize" />	
+										<h3>Payment Type</h3>
+										<p>What did you pay with?</p>
+									</li>
+		        				</ul>
+							</div>
+						</div>
+					    <!--<div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:60px"><a href="error404.html" class="browse" id="billType"><img id="billTypeImg" src="img/btypeimg.png">Test 1</a></div></div>
 					    <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:60px"><a href="error404.html" class="browse" id="priority"><img id="priorityImg" src="img/prioimg.png">Test 2</a></div></div>
 					    <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:60px"><a href="error404.html" class="browse" id="dueDate"><img id="dueDateImg" src="img/dueimg.png"></a></div></div>
 					    <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:60px"><a href="error404.html" class="browse" id="frequency"><img id="frequencyImg" src="img/freqimg.png"></a></div></div>
 					    <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:60px"><a href="error404.html" class="browse" id="paymentType"><img id="paymentStatusImg" src="img/paystatimg.png"></a></div></div>
-					    <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:60px"><a href="error404.html" class="browse" id="paymentType"><img id="paymentTypeImg" src="img/payimg.png"></a></div></div>
+					    <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:60px"><a href="error404.html" class="browse" id="paymentType"><img id="paymentTypeImg" src="img/payimg.png"></a></div></div>-->
 					    
-					</div>
+				
+		
+	
 	        		<!--<p><a href="error404.html" class="browse" id="billType"><img id="billTypeImg" src="img/btypeimg.png"></a></p>
 		           	<p><a href="error404.html" class="browse" id="priority"><img id="priorityImg" src="img/prioimg.png"></a></p>
 		           	<p><a href="error404.html" class="browse" id="dueDate"><img id="dueDateImg" src="img/dueimg.png"></a></p>
@@ -68,7 +103,7 @@ URL: http://grind-design.com
 		            <p><a href="error404.html" class="browse" id="paymentType"><img id="paymentTypeImg" src="img/payimg.png"></a></p>-->
 				</ul>
 	        </div>
-			
+	        
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
@@ -207,46 +242,56 @@ URL: http://grind-design.com
 				</hgroup>
 			</div>
 			<div  data-role="content">
-				<h2>Grind-Design projects for Full Sail</h2>
-				<p>Designer:  Robert Warren</p>
-				
-				<div data-role="collapsible">
-					<h3>Source</h3>
-					<p> Follow my <a href = "https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2.git">github</a> for updates </p>
-				</div>
-				
-				<div data-role="collapsible">
-					<h3>Social Networks</h3>
-					<p>Follow me on <a href = "https://twitter.com/grindnmosh">Twitter</a></p>
-					<p>Like Me on <a href = "https://www.facebook.com/grindnmosh">Facebook</a></p>
-					<p>+1 Me on <a href = "https://plus.google.com/115633683788706355406/">Google+</a></p>
-				</div>
-
-				<div data-role="collapsible">
-					<h3>Contact Info</h3>
-					<h4>For Bug and Error Reports:</h4>
-					<p>bugreports@grind-design.com</p>
-					<h4>Suggestions:</h4>
-					<p>suggestions@grind-design.com</p>
-					<h4>Site Issues:</h4>
-					<p>admin@grind-design.com</p>
-					<h4>Contact the Developer:</h4>
-					<p>grindnmosh@grind-design.com</p>
-				</div>
-				
-				<div data-role="collapsible">
-					<h3>Credits</h3>
-					<p>Hand Giving Money To Other Hand Image courtesy of creativedoxfoto/FreeDigitalPhotos.net</p>
-				</div>
-				
-				<div data-role="collapsible">
-					<h3>App Versions</h3>
-					<p><a href = "https://www.dropbox.com/sh/7idhb6ag3of96yv/YKoKug1zIr">Gold Version</a></p>
-					<p><a href = "https://www.dropbox.com/sh/ehx8ny2idvpjoe0/hg-9dzI9Jx">Bronze Version</a></p>
-				</div>
-				
+				<ul>
+					<h2>Grind-Design projects for Full Sail</h2>
+					<p>Designer:  Robert Warren</p>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Source</h3>
+						<p> Follow my <a href = "https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2.git">github</a> for updates </p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Social Networks</h3>
+						<p>Follow me on <a href = "https://twitter.com/grindnmosh">Twitter</a></p>
+						<p>Like Me on <a href = "https://www.facebook.com/grindnmosh">Facebook</a></p>
+						<p>+1 Me on <a href = "https://plus.google.com/115633683788706355406/">Google+</a></p>
+					</div>
+	
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Contact Info</h3>
+						<h4>For Bug and Error Reports:</h4>
+						<p>bugreports@grind-design.com</p>
+						<h4>Suggestions:</h4>
+						<p>suggestions@grind-design.com</p>
+						<h4>Site Issues:</h4>
+						<p>admin@grind-design.com</p>
+						<h4>Contact the Developer:</h4>
+						<p>grindnmosh@grind-design.com</p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true" >
+						<h3>Credits</h3>
+						<p>Hand Giving Money To Other Hand Image courtesy of creativedoxfoto/FreeDigitalPhotos.net</p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>App Versions</h3>
+						Bronze Links:
+						<p><a href = "http://grind-design.co.nf">Bronze URL</a></p>
+						<p><a href = "https://www.dropbox.com/sh/ehx8ny2idvpjoe0/hg-9dzI9Jx">Bronze Dropbox</a></p>
+						<p><a href = "https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2/tree/gh-pages/bronze">Bronze gh-pages</a></p>
+						<p><a href = "https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2/tree/master/bronze">Bronze Master</a></p>
+						
+						Gold Links:
+						<p><a href = "http://grind-design.com">Gold URL</a></p>
+						<p><a href = "https://www.dropbox.com/sh/7idhb6ag3of96yv/YKoKug1zIr">Gold Dropbox</a></p>
+						<p><a href = "https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2/tree/gh-pages/gold">Gold gh-pages</a></p>
+						<p><a href = "https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2/tree/master/gold">Gold Master</a></p>
+					</div>
+				</ul>
 			</div>
-			
+		
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
@@ -260,8 +305,8 @@ URL: http://grind-design.com
 				<p>Designer:  Robert Warren</p>-->
 			</div>
 		</div>
-		
-		<div data-role="page" id="view" >
+	
+		<!--<div data-role="page" id="view" >
 			
 			<div data-role="header" data-position="fixed">
 				<hgroup>
@@ -269,10 +314,10 @@ URL: http://grind-design.com
 					<div data-role="navbar">
 						<ul>
 							<li><a href="#home" data-icon="home">Home</a></li>
-							<li><a href="additem.html" data-ajax="false" data-icon="plus">Add Bill</a></li>
+							<li><a href="additem.html" data-ajax="false" data-icon="plus">Add Bill</a></li>-->
 							<!--<li><a href="#view" data-ajax="false" data-icon="check">View Bills</a></li>-->						
-						</ul>
-					</div>					</div>
+						<!--</ul>
+					</div>					
 				</hgroup>
 			</div>
 			<div id="display" data-role="content"></div>
@@ -282,12 +327,12 @@ URL: http://grind-design.com
 						<li><a href="https://twitter.com/grindnmosh" data-icon="gear">Follow Me</a></li>
 						<li><a href="#about" data-icon="info">About</a></li>
 					</ul>
-				</div>
+				</div>-->
 				<!--<p> Follow my <a href = "https://github.com/grindnmosh">github</a> for updates </p>
 				<p> Like my work? Follow me on <a href = "https://twitter.com/grindnmosh">Twitter</a></p>
 				<p>Designer:  Robert Warren</p>-->
-			</div>
-		</div>
+			<!--</div>
+		</div>-->
 		
 		<div data-role="page" id="news" >
 			
@@ -305,11 +350,9 @@ URL: http://grind-design.com
 			</div>
 			<div data-role="content">
 				<ul>
-					<form>
-				     	<input type="search" name="search-1" id="search-1" value="">
-	        		</form>
+				    <input type="search" name="search" id="search-basic" value="" />
 					<div data-role="collapsible" data-collapsed="true">
-						<img src="img/utilities.jpg" value="imgSize" />
+						<img id="imgSize" src="img/utilities.jpg" value="imgSize" />
 						<h3>Bill Due Date: 2013-04-23</h3>
 						<li>Bill Type: Utilities</li>
 						<li>Bill Name: SRP</li>
@@ -324,7 +367,7 @@ URL: http://grind-design.com
 						<li>comments: Pay extra 30 to help with higher summer bills.</li>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
-						<img src="img/utilities.jpg" value="imgSize" />
+						<img id="imgSize" src="img/utilities.jpg" value="imgSize" />
 						<h3>Bill Due Date: 2013-04-26</h3>
 						<li>Bill Type: Utilities</li>
 						<li>Bill Name: City of Mesa</li>
@@ -339,7 +382,7 @@ URL: http://grind-design.com
 						<li>comments: </li>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
-						<img src="img/vehicle.jpg" value="imgSize" />
+						<img id="imgSize" src="img/vehicle.jpg" value="imgSize" />
 						<h3>Bill Due Date: 2013-04-27</h3>
 						<li>Bill Type: Vehicle</li>
 						<li>Bill Name: Hyundai Elantra</li>
@@ -354,7 +397,7 @@ URL: http://grind-design.com
 						<li>comments: Wife’s Car</li>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
-						<img src="img/vehicle.jpg" value="imgSize" />
+						<img id="imgSize" src="img/vehicle.jpg" value="imgSize" />
 						<h3>Bill Due Date: 2013-04-27</h3>
 						<li>Bill Type: Vehicle</li>
 						<li>Bill Name: Registration Hyundai Elantra</li>
@@ -369,7 +412,7 @@ URL: http://grind-design.com
 						<li>comments: Wife’s Car 1 year registration.</li>
 					</div>
 					<div data-role="collapsible" data-collapsed="true" data-collapsed="true">
-					<img src="img/housing.jpg" value="imgSize" />		
+					<img id="imgSize" src="img/housing.jpg" value="imgSize" />		
 						<h3>Bill Due Date: 2013-05-01</h3>
 						<li>Bill Type: Housing</li>
 						<li>Bill Name: Rent</li>
