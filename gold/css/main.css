@@ -97,7 +97,15 @@ form fieldset ul select {
 	height: 100px;
 }
 #browseSz {
-	width: 450px;
+	width: 275px;
+	align: center;
+}
+#ctaimg {
+	width: 275px;
+	align: center;
+}
+#brandImg {
+	width: 275px;
 }
 #billTypeImg {
 	Height: 90px;
@@ -111,26 +119,26 @@ form fieldset ul select {
 #priorityImg {
 	Height: 90px;
 }
-#frequencyImg {
+#frequencyImg 
 	Height: 90px;
 }
 #paymentTypeImg {
 	Height: 90px;
 }
 #imgSize1 {
-	Height: 150px;
+	Height: 75px;
 }
 #imgSize2 {
-	Height: 150px;
+	Height: 75px;
 }
 #imgSize3 {
-	Height: 150px;
+	Height: 75px;
 }
 #imgSize4 {
-	Height: 150px;
+	Height: 75px;
 }
 #imgSize5 {
-	Height: 150px;
+	Height: 75px;
 }
 #freq {
 	display: inline;
@@ -154,12 +162,6 @@ p.padding {
 .errors {
 	color: red;
 	border: 1px solid red;
-}
-#ctaimg {
-	align: center;
-}
-.browse {
-	align: center;
 }
 h2 {
 	align: center;

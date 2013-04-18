@@ -98,7 +98,24 @@ form fieldset ul select {
 #browseSz {
 	width: 450px;
 }
-
+#billTypeImg {
+  height: 150px;
+}
+#priorityImg {
+  height: 150px;
+}
+#dueDateImg {
+  height: 150px;
+}
+#frequencyImg {
+  height: 150px;
+}
+#paymentStatusImg {
+  height: 150px;
+}
+#paymentTypeImg {
+  height: 150px;
+}
 #freq {
 	display: inline;
 } 
