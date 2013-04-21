@@ -1,14 +1,14 @@
-Robert Warren
+<!--Robert Warren
 Term 1304
 Mobile Interface and Usability (MIU)
 I Owe, I Owe * Bill List
 
-Dropbox: https://www.dropbox.com/sh/03yhmwxv5pmms41/4XEl9oEfZ8
-Github: https://github.com/grindnmosh/Warren_Robert_1304_MIU.git
-Master Branch: https://github.com/grindnmosh/Warren_Robert_1304_MIU
-gh-pages branch: https://github.com/grindnmosh/Warren_Robert_1304_MIU/tree/gh-pages
-Working_Branch: https://github.com/grindnmosh/Warren_Robert_1304_MIU/tree/Working-Branch
-URL: http://grind-design.com
+Dropbox: https://www.dropbox.com/sh/vosdno8h8hrwb6s/ClRWF3j_Oh
+Github: https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2.git 
+Master Branch: https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2 
+gh-pages branch: https://github.com/grindnmosh/Warren_Robert_1304_MIU_Part_2/tree/gh-pages  
+Gold URL: http://grind-design.com 
+Bronze URL: http://grind-design.co.nf -->
 
 test devices and software:
 1. safari (PC & Mac)

@@ -66,3 +66,14 @@ h2 {
 p {
 	text-align: center;
 }
+#addNewBill {
+	display: none
+}
+label.error {
+	display: block;
+	margin: 10px 0;
+	color: red;
+}
+#abErrors {
+	display: none;
+}
