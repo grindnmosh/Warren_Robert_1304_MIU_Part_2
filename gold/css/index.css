@@ -77,3 +77,25 @@ label.error {
 #abErrors {
 	display: none;
 }
+legend {
+	display: block;
+	margin: 10px 0;
+}
+label {
+	display: block;
+	margin: 10px 0;
+}
+.inputHints {
+	color: grey;
+	font-size: x-small;
+}
+
+#billImg {
+	align: left;
+	width: 100px;
+	margin: 40px 0;
+	border: 2px solid blue;
+}
+li {
+	list-style: none;
+}

@@ -307,9 +307,8 @@ URL: http://grind-design.com
 		<div data-role="page" id="add">
 			
 			<div data-role="header" data-position="fixed">
-				<hgroup>
 					<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
-				</hgroup>
+				
 			</div>
 			
 			<div  data-role="content">
@@ -322,101 +321,113 @@ URL: http://grind-design.com
 						<div>
 							<p>Fields marked with * are required fields.</p>
 						</div>
-						<div data-role="fieldcontain">
+						<div>
 					    	<label for="btype">Bill Type</label>
-					    	<select name="btype" id="btype" class="required" data-mini="true">
+					    	<legend>Bill Type</legend>
+					    	<select name="btype" id="btype" data-mini="true">
 						        <option data-placeholder="true" value>--Choose Bill Type--</option>
 								<option value="Housing">Housing</option>								
-								<option value="Vehicle">Vehicle</option>
-								<option value="Utilities">Utilities</option>
-								<option value="Personal">Personal</option>
-								<option value="Education">Education</option>
-								<option value="Business">Business</option>
-								<option value="Other">Other</option>
+								<option value>Vehicle</option>
+								<option value>Utilities</option>
+								<option value>Personal</option>
+								<option value>Education</option>
+								<option value>Business</option>
+								<option value>Other</option>
 							</select>
+							<p class="inputHints">Please select bill category</p>
 						</div>
-						<div data-role="fieldcontain">
+						<div>
 							<label for="bname" >Bill Name</label>
 						    <input type="text"  data-clear-btn="true" name="bname" id="bname" class="required" placeholder="Elec, Car, Netflix, etc" value="">
+						    <p class="inputHints">This is where you name your bill</p>
 						</div>
-						<div data-role="fieldcontain">
+						<div>
 						        <label for="prio">Priority</label>
 						        <input type="range" id="prio" data-mini="true" min="0" max="10" value="5">
+						        <p class="inputHints">Priority: Low_______________________High</p>
 						</div>
-						<div data-role="fieldcontain">
+						<div>
 							<label for="amt">Amount</label>
 							<input type="text" data-clear-btn="true" name="amt" id="amt" class="required number"  placeholder="150.00" />
+							<p class="inputHints">Please enter bill amount in 100.00 format</p>
 						</div>
-						<div data-role="fieldcontain">
-							<label for="due">Due Date</label><input type="date" name="due" id="due" class="required date" placeholder="2013/01/13" />
+						<div>
+							<label for="due">Due Date</label>
+							<input type="date" data-clear-btn="true" name="due" id="due" placeholder="2013/01/13" class="required date"  />
+							<p class="inputHints">Please enter the bill due date</p>
 						</div>
-						<div data-role="fieldcontain">
-							<label for="freq" id="freq" class="insert">frequency </label>
+						<div>
+							<label for="freqs">frequency</label>
+							<legend>frequency</legend>
+							<select name="freqs" id="freqs" data-mini="true">
+						        <option data-placeholder="true" value>--Choose Frequency--</option>
+								<option value>One Time</option>								
+								<option value>Weekly</option>
+								<option value>Bi-Weekly</option>
+								<option value>Monthly</option>
+								<option value>Quarterly</option>
+								<option value>Annually</option>
+								<option value>Other</option>
+							</select>
+							<p class="inputHints">Please select the frequency of this bill</p>
 						</div>
-					
 						<input type="hidden" name="billNumber" id="billNumber" value="00001" />
 						<input type="hidden" name="timeSaved" id="timeSaved" value="currentTime" />
 	
 					</fieldset>
-		    		<div data-role="fieldcontain">
+		    		<div>
 						<fieldset data-role="controlgroup">
 							<legend>Payment Status</legend>
-						    <input type="radio" value="UnPaid" name="status" id="status-unpd" class="required" />
-						    <label for="status-unpd">UnPaid</label>
-						    <input type="radio" value="Paid" name="status" id="status-pd" />
-						    <label for="status-pd">Paid With</label>
+						    <input type="radio" checked value="UnPaid" name="status" id="unpd" class="required" />
+						    <label for="unpd">UnPaid</label>
+						    <input type="radio" value="Paid" name="status" id="pd" />
+						    <label for="pd">Paid With</label>
 				    	</fieldset>
-		    		</div>
-		    		<div data-role="fieldcontain">
-				    	<select id="pdwith">
+		  			   	<select id="pdwith">
 							<option data-placeholder="true" value>--Choose Payment Type--</option>
 							<optgroup label="Cash Payment Types">		
-								<option value="Debit Card">Debit Card</option>
-								<option value="Cash">Cash</option>
-								<option value="Check">Check</option>
+								<option value>Debit Card</option>
+								<option value>Cash</option>
+								<option value>Check</option>
 							</optgroup>
 							<optgroup label="Credit Cards">
-								<option value="MasterCard">MasterCard</option>
-								<option value="Visa">Visa</option>
-								<option value="Discover">Discover</option>
-								<option value="American Express">American Express</option>
-								<option value="Other Card">Other Card</option>
+								<option value>MasterCard</option>
+								<option value>Visa</option>
+								<option value>Discover</option>
+								<option value>American Express</option>
+								<option value>Other Card</option>
 							</optgroup>									
-						</select>	
+						</select>
+						<p class="inputHints">Please select payment status</p>	
+						<p class="inputHints">Please select payment method if applicable</p>
 		    		</div>
-	    		</div>
-	    		<div data-role="fieldcontain">
-				    <fieldset data-role="controlgroup">
-				    	<div data-role="fieldcontain">
+		    		<div>
+					    <fieldset data-role="controlgroup">
 					        <legend>Payment Time</legend>
-					        
-						        <input type="checkbox" name="paymentTime" id="ontime" value-"On Time">
-						        <label for="ontime" >On Time</label>
-						        <input type="checkbox" name="paymentTime" id="late" value="Late">
-						        <label for="late" >Late</label>
-						        <input type="checkbox" name="paymentTime" id="lfee" value="Late Fee">
-						        <label for="lfee" >Late Fee</label>
-				        </div>
-				    </fieldset>
+					        <input type="checkbox" name="paymentTime" id="ontime" value-"On Time">
+					        <label for="ontime" >On Time</label>
+					        <input type="checkbox" name="paymentTime" id="late" value="Late">
+					        <label for="late" >Late</label>
+					        <input type="checkbox" name="paymentTime" id="lfee" value="Late Fee">
+					        <label for="lfee" >Late Fee</label>
+					        <p class="inputHints">Please select all that apply</p>
+					    </fieldset>
+		    		</div>
+				    <div>
+					    <label for="textArea">Comments</label>
+					    <div><textarea id="textArea"></textarea></div>
+				    </div>
+				    <div>
+						<input type="submit" id="saveMe" value="Save Me" data-role="button" data-inline="true" data-theme="b" data-icon="arrow-r" data-iconpos="right" />
+						<input type="reset" id="resetMe" data-role="button" data-inline="true" data-theme="a" data-icon="arrow-r" data-iconpos="right" value="Reset Me" />
+				    </div>
+				    
+				    <a href="#errors" id="abErrors" data-rel="dialog" data-transition="pop">Open Errors</a>
 	    		</div>
-			    <div data-role="fieldcontain">
-				    <label for="textArea">Comments</label>
-				    <div data-role="fieldcontain">    				
-					    <textarea></textarea>
-			    </div>
-			    <div data-role="fieldcontain">
-					<input type="submit" id="saveMe" value="Save Me" data-role="button" data-inline="true" data-theme="b" data-icon="arrow-r" data-iconpos="right" />
-			    </div>
-				<div>
-					<input type="reset" id="resetMe" data-role="button" data-inline="true" data-theme="a" data-icon="arrow-r" data-iconpos="right" value="Reset Me" />
-			    </div>
-			    
-			    <a href="#errors" id="abErrors" data-rel="dialog" data-transition="pop">Open Errors</a>
-			    
 			</form>	
-			<div data-role="fieldcontain">
+			<div>
 				<input type="button" data-role="button" data-inline="true" data-theme="d" data-icon="arrow-r" data-iconpos="right" value="Clear Storage" id="clearAllData"/> 
-				<a href = "#view" data-ajax="false" id="displayLink"><input type="button" data-role="button" data-inline="true" data-theme="d" data-icon="arrow-r" data-iconpos="right" value="Display Bills" /></a>
+				<a href = "#view" id="displayLink"><input type="button" data-role="button" data-inline="true" data-theme="d" data-icon="arrow-r" data-iconpos="right" value="Display Bills" /></a>
 				<a href="#add" onclick="window.location.reload(true)" id="addNewBill"><input type="button" data-role="button" data-inline="true" data-theme="d" data-icon="arrow-r" data-iconpos="right" value="Add Another Bill" /></a></p>
 			</div>
 	    
@@ -434,7 +445,7 @@ URL: http://grind-design.com
 		</div>
 
 
-		<!--<div data-role="page" id="view" >
+		<div data-role="page" id="view" >
 			
 			<div data-role="header" data-position="fixed">
 				<hgroup>
@@ -452,7 +463,7 @@ URL: http://grind-design.com
 					</ul>
 				</div>	
 			</div>	
-		</div>-->
+		</div>
 		
 		
 		
