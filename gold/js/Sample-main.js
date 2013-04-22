@@ -13,7 +13,7 @@ $(document).ready(function(){
 					abErrors.click();
 					var labels = '';
 					for(var key in validator.submitted) {
-						var tag = $('label[for^="'+ key +'"]').not('[generated]');
+						var tag = $('label[for^="'+ key +'"]').not('.error');
 						var groupTag = tag.closest('fieldset').find('.ui-controlgroup-label').not('[generated]');
 						var itemName = groupTag.length ? groupTag.text() : tag.text();
 						labels += '<li>'+ itemName +'</li>';
