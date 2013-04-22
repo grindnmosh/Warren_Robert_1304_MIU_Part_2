@@ -337,7 +337,7 @@ URL: http://grind-design.com
 					<fieldset data-role="controlgroup" id="top">
 						<h2>Add A New Bill</h2>
 						<p>Fields marked with * are required fields.</p>
-						<div>
+						<div data-role="fieldcontain">
 					    	<label for="btype">Bill Type</label>
 					    	<legend>Bill Type</legend>
 					    	<select name="btype" id="btype" class="required" data-mini="true">
@@ -352,27 +352,27 @@ URL: http://grind-design.com
 							</select>
 							<p class="inputHints">Please select bill category</p>
 						</div>
-						<div>
+						<div data-role="fieldcontain">
 							<label for="bname" >Bill Name</label>
 						    <input type="text"  data-clear-btn="true" name="bname" id="bname" class="required" placeholder="Elec, Car, Netflix, etc" value="">
 						    <p class="inputHints">This is where you name your bill</p>
 						</div>
-						<div>
+						<div data-role="fieldcontain">
 						        <label for="prio">Priority</label>
 						        <input type="range" id="prio" data-mini="true" min="0" max="10" value="5">
 						        <p class="inputHints">Priority: Low_______________________High</p>
 						</div>
-						<div>
+						<div data-role="fieldcontain">
 							<label for="amt">Amount</label>
 							<input type="text" data-clear-btn="true" name="amt" id="amt" class="required number"  placeholder="150.00" />
 							<p class="inputHints">Please enter bill amount in 100.00 format</p>
 						</div>
-						<div>
+						<div data-role="fieldcontain">
 							<label for="due">Due Date</label>
 							<input type="date" data-clear-btn="true" name="due" id="due" placeholder="2013/01/13" class="required date"  />
 							<p class="inputHints">Please enter the bill due date</p>
 						</div>
-						<div>
+						<div data-role="fieldcontain">
 							<label for="freqs">frequency</label>
 							<legend>frequency</legend>
 							<select name="freqs" id="freqs" class="required" data-mini="true">
@@ -380,7 +380,7 @@ URL: http://grind-design.com
 								<option value="One Time">One Time</option>								
 								<option value="Weekly">Weekly</option>
 								<option value="Bi-Weekl">Bi-Weekly</option>
-								<option value="Monthly">Monthly</option>
+								<option value="Monthly" selected="selected">Monthly</option>
 								<option value="Quarterly">Quarterly</option>
 								<option value="Annually">Annually</option>
 								<option value="Other">Other</option>
@@ -391,7 +391,7 @@ URL: http://grind-design.com
 						<input type="hidden" name="timeSaved" id="timeSaved" value="currentTime" />
 	
 					</fieldset>
-		    		<div>
+		    		<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<legend>Payment Status</legend>
 						    <input type="radio" checked value="UnPaid" name="status" id="unpd" class="required" />
@@ -417,7 +417,7 @@ URL: http://grind-design.com
 						<p class="inputHints">Please select payment status</p>	
 						<p class="inputHints">Please select payment method if applicable</p>
 		    		</div>
-		    		<div>
+		    		<div data-role="fieldcontain">
 					    <fieldset data-role="controlgroup">
 					        <legend>Payment Time</legend>
 					        <input type="checkbox" name="paymentTime" id="ontime" value-"On Time">
@@ -429,7 +429,7 @@ URL: http://grind-design.com
 					        <p class="inputHints">Please select all that apply</p>
 					    </fieldset>
 		    		</div>
-				    <div>
+				    <div data-role="fieldcontain">
 					    <label for="textArea">Comments</label>
 					    <div><textarea id="textArea"></textarea></div>
 				    </div>
