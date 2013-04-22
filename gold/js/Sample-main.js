@@ -6,6 +6,7 @@ $(document).ready(function(){
 			
 	$('#add').on('pageinit', function(){
 	
+
 			var billForm = $('#addBill');
 			//var	abErrors = $('#abErrors');
 		    billForm.validate({
@@ -27,10 +28,22 @@ $(document).ready(function(){
 		
 			})
 		//any other code needed for addItem page goes here
-		
+			$(document).ready( function() {
+			    var now = new Date();
+			    var month = (now.getMonth() + 1);               
+			    var day = now.getDate();
+			    if(month < 10) 
+			        month = "0" + month;
+			    if(day < 10) 
+			        day = "0" + day;
+			    var today = now.getFullYear() + '-' + month + '-' + day;
+			    $('#due').val(today);
+			});
+
 	});
 	
 });
+
 
 var clearBill = document.getElementById("resetMe");
 var localClear = document.getElementById("clearAllData");
