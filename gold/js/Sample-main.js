@@ -17,7 +17,7 @@ $(document).ready(function(){
 						var tag = $('label[for^="'+ key +'"]').not('.error');
 						var groupTag = tag.closest('fieldset').find('.ui-controlgroup-label').not('[generated]');
 						var itemName = groupTag.length ? groupTag.text() : tag.text();
-						labels += '<li>'+ itemName +'</li>';
+						labels += '<li>' + itemName + ": *Required" + '</li>';
 					};
 					$("#errors ul").html(labels);
 				},
@@ -44,7 +44,7 @@ $(document).ready(function(){
 	
 });
 
-
+var saveBill = document.getElementById("saveMe");
 var clearBill = document.getElementById("resetMe");
 var localClear = document.getElementById("clearAllData");
 var saveSuccess = "Your Bill Is Saved!"
@@ -105,11 +105,12 @@ function makeEdits() {
     	document.getElementById("lfee").setAttribute("checked", "checked");
 	};
 	document.getElementById("textArea").value = recallData.textArea[1];
-	//saveBill.removeEventListener("click", validate);
-	document.getElementById("saveMe").value = "Edit Bill";
+	saveBill.removeEventListener("click", validator);
+	document.getElementById("saveMe").value = "Edit Me";
 	var changeSubmit = document.getElementById("saveMe");
-	changeSubmit.addEventListener("click");
+	changeSubmit.addEventListener("click", validator);
 	changeSubmit.key = this.key
+
 };
 
 function loadImg(billImg, newSub) {
@@ -120,17 +121,6 @@ function loadImg(billImg, newSub) {
 	var imgSize = insertImg.setAttribute("class", "billImg");		
 	var setImg = insertImg.setAttribute("src", "img/" + billImg + ".jpg");
 	img.appendChild(insertImg);
-};
-
-function cleanHouse() {
-	if(localStorage.length === 0) {
-		alert("There is no data to clear!!");
-	} else {
-	localStorage.clear();
-	alert("All bills are deleted");
-	window.location.reload();
-	};
-	return false;
 };
 
 function cleanHouse() {
@@ -200,7 +190,7 @@ function getSampleBills() {
 //var getData = function(){};
 function getBill() {
 	//switchPages("on"); 
-	window.location='#view';
+	//window.location='#view';
 	if(localStorage.length === 0) {
 		getSampleBills();
 		alert("There is no data to view. Sample Data has been added.");
@@ -209,7 +199,7 @@ function getBill() {
 	newDiv.setAttribute("id", "bill");
 	var newList = document.createElement("ul");
 	newDiv.appendChild(newList);	
-	document.body.appendChild(newDiv);
+	document.getElementById("display").appendChild(newDiv);
 	var newList = document.createElement("ul");
 	newDiv.appendChild(newList);	
 	document.getElementById("display").style.display = "block";
@@ -249,31 +239,34 @@ function getForm(key) {
 	getCheckBoxLate();
 	getCheckBoxLateFee();
 	var item = {};
-			item.btype = ["Bill Type: ", document.getElementById("btype").value];
-		item.bname = ["Bill Name: ", document.getElementById("bname").value];
-		item.prio = ["Bill Priority: ", document.getElementById("prio").value];
-		item.amt = ["Bill Amount: $", document.getElementById("amt").value];
-		 	item.due = ["Bill Due Date: ", document.getElementById("due").value];
-		 	item.freqs = ["Bill Frequency: ", document.getElementById("freqs").value];
-		item.pd = ["Paid: ", paidValue];
-		 	item.pdwith = ["Paid with: ", paymentValue];
-		 	item.ontime = ["On time?: ", onTime];   		 	
-		 	item.late = ["Late?: ", late];
-		 	item.lfee = ["Late Fee?: ", lateFee];
-		 	item.textArea = ["Comments: ", document.getElementById("textArea").value];
+	item.btype = ["Bill Type: ", document.getElementById("btype").value];
+	item.bname = ["Bill Name: ", document.getElementById("bname").value];
+	item.prio = ["Bill Priority: ", document.getElementById("prio").value];
+	item.amt = ["Bill Amount: $", document.getElementById("amt").value];
+	item.due = ["Bill Due Date: ", document.getElementById("due").value];
+	item.freqs = ["Bill Frequency: ", document.getElementById("freqs").value];
+	item.pd = ["Paid: ", paidValue];
+ 	item.pdwith = ["Paid with: ", paymentValue];
+ 	item.ontime = ["On time?: ", onTime];   		 	
+ 	item.late = ["Late?: ", late];
+ 	item.lfee = ["Late Fee?: ", lateFee];
+ 	item.textArea = ["Comments: ", document.getElementById("textArea").value];
 	localStorage.setItem(id, JSON.stringify(item));
 	alert(saveSuccess);
-	 	saveMe.setAttribute("type", "reset");  
+ 	saveMe.setAttribute("type", "reset"); 
+ 	window.location.reload(); 
 	return getForm;
-	};
+};
 
 //var	deleteItem = function (){};
 function runDelete() {
 	var verify = confirm("Are you sure you want to delete this bill. This can not be undone.");
 	if(verify) {
 		localStorage.removeItem(this.key);
-		window.location.reload();
 		alert("Bill was deleted");
+		window.location.reload();
+		window.location='#add';
+ 
 	} else {
 		alert("No changes have been made.");
 	};
@@ -292,7 +285,7 @@ function clearAll() {
 };
 
 
-
+//saveBill.addEventListener("click", validator);
 displayLink.addEventListener("click", getBill);
 clearBill.addEventListener("click", clearAll);
 localClear.addEventListener("click", cleanHouse);

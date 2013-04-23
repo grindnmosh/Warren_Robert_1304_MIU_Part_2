@@ -66,9 +66,6 @@ h2 {
 p {
 	text-align: center;
 }
-#addNewBill {
-	display: none
-}
 label.error {
 	display: block;
 	margin: 10px 0;
@@ -97,4 +94,11 @@ label {
 }
 li {
 	list-style: none;
+}
+.star {
+	color: red;
+	display: inline;
+}
+#centered {
+	text-align: center;
 }
