@@ -23,7 +23,7 @@ $(document).ready(function(){
 				},
 				submitHandler: function() {
 				var data = billForm.serializeArray();
-				getForm(data);
+				getForm();
 				}
 		
 			})
@@ -39,16 +39,14 @@ $(document).ready(function(){
 			    var today = now.getFullYear() + '-' + month + '-' + day;
 			    $('#due').val(today);
 			});
-
 	});
 	
 });
 
-var saveBill = document.getElementById("saveMe");
 var clearBill = document.getElementById("resetMe");
 var localClear = document.getElementById("clearAllData");
 var saveSuccess = "Your Bill Is Saved!"
-
+var saveBill = document.getElementById("saveMe")
 
 function createButtons(key, buttons) {
 	var editButton = document.createElement("input");
@@ -73,66 +71,6 @@ function createButtons(key, buttons) {
 	buttons.appendChild(delButton);
 };
 
-function editAdd(){
-        window.location='#add';
-    }
-    
-function makeEdits() {
-	var value = localStorage.getItem(this.key);
-	var recallData = JSON.parse(value);
-	//switchPages("off");
-	editAdd();
-	document.getElementById("btype").value = recallData.btype[1];
-	document.getElementById("bname").value = recallData.bname[1];
-	document.getElementById("amt").value = recallData.amt[1];
-	document.getElementById("prio").value = recallData.prio[1];
-	document.getElementById("due").value = recallData.due[1];
-	document.getElementById("freqs").value = recallData.freqs[1];
-	var radioSelected = document.forms[0].status;
-	for(i=0; i<radioSelected.length; i++) {
-		if(radioSelected[i].value == recallData.pd[1]) {
-			radioSelected[i].setAttribute("checked", "checked");
-		};
-	};
-	document.getElementById("pdwith").value = recallData.pdwith[1];    	
-	if(recallData.ontime[1] == "On Time") {
-    	document.getElementById("ontime").setAttribute("checked", "checked");
-	};
-	if(recallData.late[1] == "Late") {
-    	document.getElementById("late").setAttribute("checked", "checked");
-	};
-	if(recallData.lfee[1] == "Late Fee") {
-    	document.getElementById("lfee").setAttribute("checked", "checked");
-	};
-	document.getElementById("textArea").value = recallData.textArea[1];
-	saveBill.removeEventListener("click", validator);
-	document.getElementById("saveMe").value = "Edit Me";
-	var changeSubmit = document.getElementById("saveMe");
-	changeSubmit.addEventListener("click", validator);
-	changeSubmit.key = this.key
-
-};
-
-function loadImg(billImg, newSub) {
-	var img = document.createElement("li");
-	newSub.appendChild(img);
-	var insertImg = document.createElement("img");
-	var imgSize = insertImg.setAttribute("id", "billImg");
-	var imgSize = insertImg.setAttribute("class", "billImg");		
-	var setImg = insertImg.setAttribute("src", "img/" + billImg + ".jpg");
-	img.appendChild(insertImg);
-};
-
-function cleanHouse() {
-	if(localStorage.length === 0) {
-		alert("There is no data to clear!!");
-	} else {
-	localStorage.clear();
-	alert("All bills are deleted");
-	window.location.reload();
-	};
-	return false;
-};
 
 function howPaid() {
 	var paidWith = document.getElementById("pdwith");
@@ -179,6 +117,62 @@ function getCheckBoxLateFee() {
 	 }
 };
 
+function editAdd(){
+        window.location='#add';
+};
+    
+function makeEdits() {
+	var value = localStorage.getItem(this.key);
+	var recallData = JSON.parse(value);
+	document.getElementById("btype").value = recallData.btype[1];
+	document.getElementById("bname").value = recallData.bname[1];
+	document.getElementById("amt").value = recallData.amt[1];
+	document.getElementById("prio").value = recallData.prio[1];
+	document.getElementById("due").value = recallData.due[1];
+	document.getElementById("freqs").value = recallData.freqs[1];
+	var radioSelected = document.forms[0].status;
+	for(i=0; i<radioSelected.length; i++) {
+		if(radioSelected[i].value == recallData.pd[1]) {
+			radioSelected[i].setAttribute("checked", "checked");
+		};
+	};
+	document.getElementById("pdwith").value = recallData.pdwith[1];    	
+	if(recallData.ontime[1] == "On Time") {
+    	document.getElementById("ontime").setAttribute("checked", "checked");
+	};
+	if(recallData.late[1] == "Late") {
+    	document.getElementById("late").setAttribute("checked", "checked");
+	};
+	if(recallData.lfee[1] == "Late Fee") {
+    	document.getElementById("lfee").setAttribute("checked", "checked");
+	};
+	document.getElementById("textArea").value = recallData.textArea[1];
+	saveMe.setAttribute("value", "Edit Me");
+	var changeSubmit = document.getElementById("saveMe");
+	changeSubmit.key = this.key
+	editAdd();
+};
+
+function loadImg(billImg, newSub) {
+	var img = document.createElement("li");
+	newSub.appendChild(img);
+	var insertImg = document.createElement("img");
+	var imgSize = insertImg.setAttribute("id", "billImg");
+	var imgSize = insertImg.setAttribute("class", "billImg");		
+	var setImg = insertImg.setAttribute("src", "img/" + billImg + ".jpg");
+	img.appendChild(insertImg);
+};
+
+function cleanHouse() {
+	if(localStorage.length === 0) {
+		alert("There is no data to clear!!");
+	} else {
+	localStorage.clear();
+	alert("All bills are deleted");
+	window.location.reload();
+	};
+	return false;
+};
 //var autofillData = function (){};
 function getSampleBills() {
 	for(var n in sampleBills) {
@@ -189,7 +183,6 @@ function getSampleBills() {
 
 //var getData = function(){};
 function getBill() {
-	//switchPages("on"); 
 	//window.location='#view';
 	if(localStorage.length === 0) {
 		getSampleBills();
@@ -239,18 +232,18 @@ function getForm(key) {
 	getCheckBoxLate();
 	getCheckBoxLateFee();
 	var item = {};
-	item.btype = ["Bill Type: ", document.getElementById("btype").value];
-	item.bname = ["Bill Name: ", document.getElementById("bname").value];
-	item.prio = ["Bill Priority: ", document.getElementById("prio").value];
-	item.amt = ["Bill Amount: $", document.getElementById("amt").value];
-	item.due = ["Bill Due Date: ", document.getElementById("due").value];
-	item.freqs = ["Bill Frequency: ", document.getElementById("freqs").value];
-	item.pd = ["Paid: ", paidValue];
- 	item.pdwith = ["Paid with: ", paymentValue];
- 	item.ontime = ["On time?: ", onTime];   		 	
- 	item.late = ["Late?: ", late];
- 	item.lfee = ["Late Fee?: ", lateFee];
- 	item.textArea = ["Comments: ", document.getElementById("textArea").value];
+		item.btype = ["Bill Type: ", document.getElementById("btype").value];
+		item.bname = ["Bill Name: ", document.getElementById("bname").value];
+		item.prio = ["Bill Priority: ", document.getElementById("prio").value];
+		item.amt = ["Bill Amount: $", document.getElementById("amt").value];
+		item.due = ["Bill Due Date: ", document.getElementById("due").value];
+		item.freqs = ["Bill Frequency: ", document.getElementById("freqs").value];
+		item.pd = ["Paid: ", paidValue];
+	 	item.pdwith = ["Paid with: ", paymentValue];
+	 	item.ontime = ["On time?: ", onTime];   		 	
+	 	item.late = ["Late?: ", late];
+	 	item.lfee = ["Late Fee?: ", lateFee];
+	 	item.textArea = ["Comments: ", document.getElementById("textArea").value];
 	localStorage.setItem(id, JSON.stringify(item));
 	alert(saveSuccess);
  	saveMe.setAttribute("type", "reset"); 
@@ -284,8 +277,6 @@ function clearAll() {
 	return clearAll
 };
 
-
-//saveBill.addEventListener("click", validator);
 displayLink.addEventListener("click", getBill);
 clearBill.addEventListener("click", clearAll);
 localClear.addEventListener("click", cleanHouse);
