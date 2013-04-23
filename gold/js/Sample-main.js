@@ -8,7 +8,7 @@ $(document).ready(function(){
 	
 
 			var billForm = $('#addBill');
-			//var	abErrors = $('#abErrors');
+			var	abErrors = $('#abErrors');
 		    billForm.validate({
 				invalidHandler: function(form, validator) {
 					abErrors.click();
@@ -46,7 +46,6 @@ $(document).ready(function(){
 var clearBill = document.getElementById("resetMe");
 var localClear = document.getElementById("clearAllData");
 var saveSuccess = "Your Bill Is Saved!"
-var saveBill = document.getElementById("saveMe")
 
 function createButtons(key, buttons) {
 	var editButton = document.createElement("input");
