@@ -123,6 +123,7 @@ function editAdd(){
 };
     
 function makeEdits() {
+	editAdd();
 	var value = localStorage.getItem(this.key);
 	var recallData = JSON.parse(value);
 	document.getElementById("btype").value = recallData.btype[1];
@@ -148,11 +149,9 @@ function makeEdits() {
     	document.getElementById("lfee").setAttribute("checked", "checked");
 	};
 	document.getElementById("textArea").value = recallData.textArea[1];
-	
 	edit.setAttribute("value", "Edit Me");
 	var changeSubmit = document.getElementById("saveMe");
 	key = this.key
-	editAdd();
 	return key
 };
 

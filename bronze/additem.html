@@ -42,11 +42,16 @@ https://github.com/grindnmosh/Warren_Robert_1303_VFW
 								<option value="Business">Business</option>
 								<option value="Other">Other</option>
 							</select>	
+							<p class="inputHints">Please select bill category</p>
 						</li>
 						<li><p class="star">*</p><label for="bname">Bill Name: </label><input type="text" id="bname" placeholder="Elec, Car, Netflix, etc" /></li>
+						    <p class="inputHints">This is where you name your bill</p>
 						<li><label for="prio">Priority: </label> Low <input type="range" id="prio" min="1" max="5" value="1" /> High </li>
+							<p class="inputHints">Please select your bills priority</p>
 						<li><p class="star">*</p><label for="amt">Amount: $</label><input type="text" id="amt" placeholder="150.00" /></li>
+							<p class="inputHints">Please enter bill amount in 100.00 format</p>
 						<li><p class="star">*</p><label for="due">Due Date: </label><input type="date" id="due"  /></li>
+							<p class="inputHints">Please enter the bill due date</p>
 						<li><p class="star">*</p><label for="due" id="freq" class="insert">frequency: </label>
 						<input type="hidden" name="billNumber" id="billNumber" value="00001" />
 						<input type="hidden" name="timeSaved" id="timeSaved" value="currentTime" />
@@ -71,12 +76,15 @@ https://github.com/grindnmosh/Warren_Robert_1303_VFW
 									<option value="American Express">American Express</option>
 									<option value="Other Card">Other Card</option>
 								</optgroup>									
-							</select>									
+							</select>	
+							<p class="inputHints">Please select payment status</p>	
+							<p class="inputHints">Please select payment method if applicable</p>
 						</li>
 						<li><input type="checkbox" value="On Time" id="ontime" name="paymentTime" /><label for="ontime">On Time</label></li>
 						<li><input type="checkbox" value="Late" id="late" name="paymentTime" /><label for="late">Late</label></li>
 						<li><input type="checkbox" value="Late Fee" id="lfee" name="paymentTime" /><label for="lfee">Late Fee Imposed</label></li>
-						<li><label for="comments" >Comments:</label><textarea id="textArea" name="textArea" placeholder="Leave comments or notes here...."></textarea></li>	
+							<p class="inputHints">Please check all that apply</p>
+						<div><li><label for="comments" >Comments:</label></div><div><textarea id="textArea" name="textArea" placeholder="Leave comments or notes here...."></textarea></div></li>	
 					</ul>	
 				</fieldset>
 				<input type="button" value="Save Me" id="saveMe"/>
