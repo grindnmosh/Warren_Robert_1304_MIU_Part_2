@@ -350,7 +350,7 @@ URL: http://grind-design.com
 						<div data-role="fieldcontain">
 					    	<label for="btype"><p class="star">*</p> Bill Type</label>
 					    	<legend><p class="star">*</p> Bill Type</legend>
-					    	<select name="btype" id="btype" class="required" data-mini="true" data-native-menu="false">
+					    	<select name="btype" id="btype" class="required"  data-native-menu="false">
 						        <option data-placeholder="true" value>--Choose Bill Type--</option>
 								<option value="Housing">Housing</option>								
 								<option value="Vehicle">Vehicle</option>
@@ -369,7 +369,7 @@ URL: http://grind-design.com
 						</div>
 						<div data-role="fieldcontain">
 					        <label for="prio">Priority</label>
-					        <input type="range" id="prio" data-mini="true" min="0" max="10" value="5">
+					        <input type="range" id="prio"  min="0" max="10" value="5">
 					        <p class="inputHints">Priority: Low_______________________High</p>
 						</div>
 						<div data-role="fieldcontain">
@@ -385,7 +385,7 @@ URL: http://grind-design.com
 						<div data-role="fieldcontain">
 							<label for="freqs"><p class="star">*</p> frequency</label>
 							<legend><p class="star">*</p> frequency</legend>
-							<select name="freqs" id="freqs" class="required" data-mini="true" data-native-menu="false">
+							<select name="freqs" id="freqs" class="required" data-native-menu="false">
 						        <option data-placeholder="true" value>--Choose Frequency--</option>
 								<option value="One Time">One Time</option>								
 								<option value="Weekly">Weekly</option>
@@ -409,7 +409,7 @@ URL: http://grind-design.com
 						    <input type="radio" value="Paid" name="status" id="pd" />
 						    <label for="pd">Paid With</label>
 				    	</fieldset>
-		  			   	<select id="pdwith">
+		  			   	<select name="pdwith" id="pdwith" data-native-menu="false">
 							<option data-placeholder="true" value>--Choose Payment Type--</option>
 							<optgroup label="Cash Payment Types">		
 								<option value="Debit Card">Debit Card</option>
