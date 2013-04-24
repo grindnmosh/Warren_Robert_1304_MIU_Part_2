@@ -23,7 +23,7 @@ $(document).ready(function(){
 				},
 				submitHandler: function() {
 				var data = billForm.serializeArray();
-				getForm();
+				getForm(key, data);
 				}
 		
 			})
@@ -43,6 +43,8 @@ $(document).ready(function(){
 	
 });
 
+var edit = document.getElementById("saveMe");
+var key = (Math.floor(Math.random()*1000000001));
 var clearBill = document.getElementById("resetMe");
 var localClear = document.getElementById("clearAllData");
 var saveSuccess = "Your Bill Is Saved!"
@@ -146,10 +148,12 @@ function makeEdits() {
     	document.getElementById("lfee").setAttribute("checked", "checked");
 	};
 	document.getElementById("textArea").value = recallData.textArea[1];
-	saveMe.setAttribute("value", "Edit Me");
+	
+	edit.setAttribute("value", "Edit Me");
 	var changeSubmit = document.getElementById("saveMe");
-	changeSubmit.key = this.key
+	key = this.key
 	editAdd();
+	return key
 };
 
 function loadImg(billImg, newSub) {
@@ -219,12 +223,8 @@ function getBill() {
 /*var storeData = function(data){
 	console.log(data);
 }; */
-function getForm(key) {
-	if(!key) {
-		var id = (Math.floor(Math.random()*1000000001));
-	} else {
-		id = key;
-	};
+function getForm(key, data) {
+	var id = key;
 	getSelectedRadio();
 	howPaid();
 	getCheckBoxOnTime();
@@ -245,7 +245,7 @@ function getForm(key) {
 	 	item.textArea = ["Comments: ", document.getElementById("textArea").value];
 	localStorage.setItem(id, JSON.stringify(item));
 	alert(saveSuccess);
- 	saveMe.setAttribute("type", "reset"); 
+ 	//edit.setAttribute("type", "reset"); 
  	window.location.reload(); 
 	return getForm;
 };
