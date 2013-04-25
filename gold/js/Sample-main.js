@@ -256,7 +256,7 @@ function runDelete() {
 		localStorage.removeItem(this.key);
 		alert("Bill was deleted");
 		window.location.reload();
-		window.location='#add';
+		//window.location='#view';
  
 	} else {
 		alert("No changes have been made.");
