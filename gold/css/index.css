@@ -11,7 +11,8 @@ URL: http://grind-design.com
 
 */
 h1 { 
-	text-align: center;
+	text-align: left;
+	margin: 0 20px;
 }
 h2 { 
 	text-align: center;
@@ -61,7 +62,8 @@ h2 {
 	align: center;
 }
 #brandImg {
-	width: 275px;
+	width: 150px;
+	text-align: left;
 }
 p {
 	text-align: center;
