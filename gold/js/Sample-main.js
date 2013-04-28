@@ -11,7 +11,7 @@ $(document).ready(function(){
 			var	abErrors = $('#abErrors');
 		    billForm.validate({
 				invalidHandler: function(form, validator) {
-					abErrors.click();
+					/*abErrors.click();
 					var labels = '';
 					for(var key in validator.submitted) {
 						var tag = $('label[for^="'+ key +'"]').not('.error');
@@ -19,7 +19,7 @@ $(document).ready(function(){
 						var itemName = groupTag.length ? groupTag.text() : tag.text();
 						labels += '<li>' + itemName + ": *Required" + '</li>';
 					};
-					$("#errors ul").html(labels);
+					$("#errors ul").html(labels);*/
 				},
 				submitHandler: function() {
 				var data = billForm.serializeArray();
@@ -255,10 +255,9 @@ function runDelete() {
 	if(verify) {
 		localStorage.removeItem(this.key);
 		alert("Bill was deleted");
+		window.location='#add';
 		window.location.reload();
-		//window.location='#view';
- 
-	} else {
+ 	} else {
 		alert("No changes have been made.");
 	};
 };
