@@ -38,7 +38,8 @@ $(document).ready(function(){
 			        day = "0" + day;
 			    var today = now.getFullYear() + '-' + month + '-' + day;
 			    $('#due').val(today);
-			});
+			}); //date plugin
+			
 			$(document).ready(function(){
 			    $("#effect").css("display","none");
 			        $(".Unpaid").click(function(){
@@ -48,7 +49,9 @@ $(document).ready(function(){
 			            $("#effect").slideUp("fast");  //Slide Up Effect
 			        }
 			     });
-			});
+			});//responsive disclosure
+			
+			
 
 	});
 	
