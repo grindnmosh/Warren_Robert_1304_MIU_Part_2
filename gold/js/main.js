@@ -39,6 +39,17 @@ $(document).ready(function(){
 			    var today = now.getFullYear() + '-' + month + '-' + day;
 			    $('#due').val(today);
 			});
+			$(document).ready(function(){
+			    $("#effect").css("display","none");
+			        $(".Unpaid").click(function(){
+			        if ($('input[name=status]:checked').val() == "Paid" ) {
+			            $("#effect").slideDown("fast"); //Slide Down Effect
+			        } else {
+			            $("#effect").slideUp("fast");  //Slide Up Effect
+			        }
+			     });
+			});
+
 	});
 	
 });

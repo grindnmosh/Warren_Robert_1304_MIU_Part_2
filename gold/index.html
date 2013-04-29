@@ -405,41 +405,45 @@ URL: http://grind-design.com
 		    		<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<legend><p class="star">*</p> Payment Status</legend>
-						    <input type="radio" data-theme="d" checked value="UnPaid" name="status" id="unpd" class="required" />
+						    <input type="radio" data-theme="d" checked value="UnPaid" name="status" id="unpd" class="Unpaid" />
 						    <label for="unpd">UnPaid</label>
-						    <input type="radio" data-theme="d" value="Paid" name="status" id="pd" />
-						    <label for="pd">Paid With</label>
+						    <input type="radio" data-theme="d" value="Paid" name="status" id="pd" class="Unpaid" />
+						    <label for="pd">Paid</label>
 				    	</fieldset>
-		  			   	<select name="pdwith" id="pdwith" data-theme="d" data-native-menu="false">
-							<option data-placeholder="true" value>--Choose Payment Type--</option>
-							<optgroup label="Cash Payment Types">		
-								<option value="Debit Card">Debit Card</option>
-								<option value="Cash">Cash</option>
-								<option value="Check">Check</option>
-							</optgroup>
-							<optgroup label="Credit Cards">
-								<option value="MasterCard">MasterCard</option>
-								<option value="Visa">Visa</option>
-								<option value="Discover">Discover</option>
-								<option value="American Express">American Express</option>
-								<option value="Other Card">Other Card</option>
-							</optgroup>									
-						</select>
-						<p class="inputHints">Please select payment status</p>	
-						<p class="inputHints">Please select payment method if applicable</p>
-		    		</div>
-		    		<div data-role="fieldcontain">
-					    <fieldset data-role="controlgroup">
-					        <legend>Payment Time</legend>
-					        <input type="checkbox" name="paymentTime" id="ontime" data-theme="d" value-"On Time">
-					        <label for="ontime" >On Time</label>
-					        <input type="checkbox" name="paymentTime" id="late" data-theme="d" value="Late">
-					        <label for="late" >Late</label>
-					        <input type="checkbox" name="paymentTime" id="lfee" data-theme="d" value="Late Fee">
-					        <label for="lfee" >Late Fee</label>
-					        <p class="inputHints">Please select all that apply</p>
-					    </fieldset>
-		    		</div>
+				    	<ol id="effect" class="formset">
+					    	<h2>Paid Bill Information:</h2>
+			  			   	<select name="pdwith" id="pdwith" data-theme="d" data-native-menu="false">
+								<option data-placeholder="true" value>--Choose Payment Type--</option>
+								<optgroup label="Cash Payment Types">		
+									<option value="Debit Card">Debit Card</option>
+									<option value="Cash">Cash</option>
+									<option value="Check">Check</option>
+								</optgroup>
+								<optgroup label="Credit Cards">
+									<option value="MasterCard">MasterCard</option>
+									<option value="Visa">Visa</option>
+									<option value="Discover">Discover</option>
+									<option value="American Express">American Express</option>
+									<option value="Other Card">Other Card</option>
+								</optgroup>									
+							</select>
+							<p class="inputHints">Please select payment status</p>	
+							<p class="inputHints">Please select payment method if applicable</p>
+			    		
+				    		<div data-role="fieldcontain">
+							    <fieldset data-role="controlgroup">
+							        <legend>Payment Time</legend>
+							        <input type="checkbox" name="paymentTime" id="ontime" data-theme="d" value-"On Time">
+							        <label for="ontime" >On Time</label>
+							        <input type="checkbox" name="paymentTime" id="late" data-theme="d" value="Late">
+							        <label for="late" >Late</label>
+							        <input type="checkbox" name="paymentTime" id="lfee" data-theme="d" value="Late Fee">
+							        <label for="lfee" >Late Fee</label>
+							        <p class="inputHints">Please select all that apply</p>
+							    </fieldset>
+				    		</div>
+				    	</div>
+			    	</ol>
 				    <div data-role="fieldcontain">
 					    <label for="textArea">Comments</label>
 					    <div><textarea id="textArea"></textarea></div>
