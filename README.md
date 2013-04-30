@@ -22,16 +22,16 @@ test devices and software:
 9. Android Emulators(iOS 4.2.2)
 
 Week 1:
-Video Review
-Video Reflection
+Video Review: http://youtu.be/huDejxFUT5Q 
+Video Reflection: http://youtu.be/rj0Ss24o-FY
 
 Week 2:
-Video Review
-Video Reflection
+Video Review: http://youtu.be/WUeHrUgi_Dg
+Video Reflection: http://youtu.be/TtJauaIXRjs
 
 Week 3:
-Video Review
-Video Reflection
+Video Review: http://youtu.be/5xshbpVYvBU
+Video Reflection: http://youtu.be/xqrXGlJJaLc
 
 Week 4:
 Video Review
