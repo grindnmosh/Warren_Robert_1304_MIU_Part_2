@@ -62,6 +62,7 @@ var key = (Math.floor(Math.random()*1000000001));
 var clearBill = document.getElementById("resetMe");
 var localClear = document.getElementById("clearAllData");
 var saveSuccess = "Your Bill Is Saved!"
+var radioSelected = document.forms[0].status;
 
 function createButtons(key, buttons) {
 	var editButton = document.createElement("input");
@@ -98,7 +99,6 @@ function howPaid() {
 
 
 function getSelectedRadio() {
-	var radioSelected = document.forms[0].status;
 	for(i=0; i<radioSelected.length; i++) {
 		if(radioSelected[i].checked) {
 			paidValue = radioSelected[i].value;
@@ -146,7 +146,6 @@ function makeEdits() {
 	document.getElementById("prio").value = recallData.prio[1];
 	document.getElementById("due").value = recallData.due[1];
 	document.getElementById("freqs").value = recallData.freqs[1];
-	var radioSelected = document.forms[0].status;
 	for(i=0; i<radioSelected.length; i++) {
 		if(radioSelected[i].value == recallData.pd[1]) {
 			radioSelected[i].setAttribute("checked", "checked");
