@@ -34,5 +34,5 @@ Video Review: http://youtu.be/5xshbpVYvBU
 Video Reflection: http://youtu.be/xqrXGlJJaLc
 
 Week 4:
-Video Review
-Video Reflection
+Video Review: http://youtu.be/Aa6z2wMOXzA
+Video Reflection: http://youtu.be/hgxBm2P98S8
